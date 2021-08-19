@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# 将work-skill放在项目代码同级目录位置
+
+cd ..
+
 for dir in `ls`;
 do
   if [ -d $dir ];then

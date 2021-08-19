@@ -16,4 +16,4 @@ interact
 
 # 需要先安装oath-toolkit
 # brew install oath-toolkit
-# echo "alias jumper='expect /Users/yangshengkai/iTerm2/jumper.exp'" >> ~/.zshrc && source ~/.zshrc
+# echo "alias jumper='expect your_jumper_path/jumper.exp'" >> ~/.zshrc && source ~/.zshrc

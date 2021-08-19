@@ -1,0 +1,19 @@
+#!/usr/bin/expect
+
+# 跳板机快速登陆
+
+set host $your_host # 跳板机ip
+set port $your_port # 跳板机端口
+set user $your_user_name # 用户名
+set empath $your_pem_path # 认证证书路径
+#set password xxx
+set kdauth [exec oathtool --totp -b $google_password] # google认证器密码
+spawn ssh -i $empath -p $port $user@$host
+expect {
+"*MFA auth*:*" { send "$kdauth\r"; }
+}
+interact
+
+# 需要先安装oath-toolkit
+# brew install oath-toolkit
+# echo "alias jumper='expect /Users/yangshengkai/iTerm2/jumper.exp'" >> ~/.zshrc && source ~/.zshrc

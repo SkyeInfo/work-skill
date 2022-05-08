@@ -7,7 +7,7 @@ cd ..
 for dir in `ls`;
 do
   if [ -d $dir ];then
-    if $dir == "work-skill"; then
+    if [ $dir == "work-skill" ];then
       continue
     fi
 

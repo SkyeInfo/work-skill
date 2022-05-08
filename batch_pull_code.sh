@@ -7,7 +7,10 @@ cd ..
 for dir in `ls`;
 do
   if [ -d $dir ];then
-    if $dir == "work-skill"; then continue
+    if $dir == "work-skill"; then
+      continue
+    fi
+
     cd $dir
     git pull;
     echo "$dir 更新完毕！"

@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# 将work-skill放在项目代码同级目录位置
+# 将work-skill软链到项目代码同级目录位置
 
-cd ..
+projectPath=$(dirname "$0")
+cd $projectPath/..
 
 for dir in `ls`;
 do

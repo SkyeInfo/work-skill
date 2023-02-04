@@ -5,8 +5,7 @@
 projectPath=$(dirname "$0")
 cd "$projectPath"/.. || return
 
-for dir in `ls`;
-do
+for dir in *; do
   if [ -d "$dir" ];then
     if [ "$dir" == "work-skill" ];then
       continue

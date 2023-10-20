@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 指定目录
-directory="/Users/yangshengkai/Music/婚礼循环音乐"
+directory="/Users/yangshengkai/pic-handle/精修"
 
 # 遍历目录中的文件
 for file in "$directory"/*; do
@@ -11,5 +11,5 @@ for file in "$directory"/*; do
     # 去掉后缀
     filename_without_extension="${filename%.*}"
 
-    ffmpeg -i $file -acodec libmp3lame -b:a 320k -q:a 9 /Users/yangshengkai/Music/婚礼循环音乐mp3/$filename_without_extension.mp3
+    convert /Users/yangshengkai/pic-handle/精修/$filename_without_extension.jpg -quality 80 /Users/yangshengkai/pic-handle/img1/$filename_without_extension.jpg
 done
